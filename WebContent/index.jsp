@@ -28,12 +28,13 @@
 	</form>
 	<br>
 	<%
+		int count = 0;
 		for (GuestBookVo vo : list) {
 	%>
 	<br>
 	<table width=510 border=1>
 		<tr>
-			<td><%=vo.getNo()%></td>
+			<td><%=list.size() - count%></td>
 			<td><%=vo.getName() %></td>
 			<td><%=vo.getReg_date() %></td>
 			<td><a href="deleteform.jsp?no=<%=vo.getNo()%>">삭제</a></td>
@@ -43,6 +44,7 @@
 		</tr>
 	</table>
 	<%
+		count++;
 		}
 	%>	
 </body>
